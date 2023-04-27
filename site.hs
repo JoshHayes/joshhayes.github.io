@@ -70,3 +70,10 @@ postCtx :: Context String
 postCtx =
   dateField "date" "%B %e, %Y"
     `mappend` defaultContext
+
+-- >>> unContext defaultContext
+-- No instance for (Show
+--                    (String -> [String] -> Item String -> Compiler ContextField))
+--   arising from a use of `evalPrint'
+--   (maybe you haven't applied a function to enough arguments?)
+-- In a stmt of an interactive GHCi command: evalPrint it_adCQ
