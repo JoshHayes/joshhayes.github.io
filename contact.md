@@ -2,10 +2,6 @@
 title: Contact
 ---
 
-How to reach me...
-
-- Email
-- GitHub
-- &c.
-
-Next...
+- 💼 [LinkedIn](https://www.linkedin.com/in/joshjohayes/)
+- 🐦 [Twitter](https://twitter.com/thejoshhayes)
+- 🐙 [GitHub](https://github.com/JoshHayes)
