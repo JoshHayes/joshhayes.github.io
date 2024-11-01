@@ -1,18 +1,14 @@
-SITENAME := joshhayes-github-io
-
 .ONESHELL:
 
 .PHONY: build
 build:
-	stack build
-	stack exec ${SITENAME} rebuild
+	nix run . rebuild
 
 .PHONY: watch
 watch:
-	stack build
-	stack exec ${SITENAME} rebuild
-	stack exec ${SITENAME} watch
+	nix run . rebuild
+	nix run . watch
 
 .PHONY: clean
 clean:
-	stack exec ${SITENAME} clean
+	nix run . clean
