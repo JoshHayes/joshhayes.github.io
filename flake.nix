@@ -52,7 +52,6 @@
       packages = forAllSystems (pkgs: {
         default = (mkHaskellPkgs pkgs).site;
       });
-
       # nix develop
       devShells = forAllSystems (pkgs: {
         default =
@@ -73,7 +72,5 @@
             ];
           };
       });
-
     };
-
 }

@@ -1,11 +1,13 @@
-name:               joshhayes-github-io
+cabal-version:      >=1.10
+
+name:               hayes-site
 version:            0.1.0.0
 build-type:         Simple
-cabal-version:      >=1.10
 
 executable site
   hs-source-dirs:   src
   main-is:          site.hs
+  default-language: Haskell2010
   build-depends:    base   == 4.*
                   , hakyll >= 4.15
                   , mtl >= 2.2.2
@@ -26,4 +28,3 @@ executable site
                   -Wno-unsafe
                   -Wno-prepositive-qualified-module
                   -O2 -threaded -rtsopts -with-rtsopts=-N
-  default-language: Haskell2010

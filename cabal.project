@@ -3,7 +3,7 @@ source-repository-package
   location: https://github.com/jez/pandoc-sidenote
   tag: 3658e7da9453fb6ab817d8eef5d1928cbcd3afbf
 
-packages: ./tonys-site.cabal
+packages: ./hayes-site.cabal
 
 constraints: pandoc-sidenote +html-sidenotes
 

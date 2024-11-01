@@ -1,4 +1,4 @@
-# Changelog for `joshhayes-github-io`
+# CHANGELOG
 
 All notable changes to this project will be documented in this file.
 
