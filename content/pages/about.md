@@ -4,10 +4,13 @@ path = "about"
 template = "about.html"
 +++
 
-I am a Quantitative Analyst on the interest rates and credit team at Fairtree.
-Most of my time is spent on research related to interest rates, credit,
-volatility, as well as systematic strategies for trading, risk management, and
-portfolio optimisation.
+I am a mathematics PhD student at the École polytechnique fédérale de Lausanne (EPFL) and Assistant-doctorant at the [Swiss Finance Institute](https://www.sfi.ch/en), working under the supervision of [Prof. Damir Filipović](https://www.epfl.ch/labs/csf/).
+
+Previously, I taught mathematics to computers at a hedge fund. I was a
+Quantitative Analyst on the interest rates and credit team at Fairtree. Most of
+my time was spent on research related to interest rates, credit, volatility, as
+well as systematic strategies for trading, risk management, and portfolio
+optimisation.
 
 $$J(f) = \int_\mathbb{R} f(x) \mathrm{d}\mu(x)$$
 
@@ -18,5 +21,4 @@ University of Cape Town. Previously, I studied mathematics and philosophy at the
 same university.
 
 - 💼 [LinkedIn](https://www.linkedin.com/in/joshjohayes/)
-- 🐦 [Twitter](https://twitter.com/thejoshhayes)
 - 🐙 [GitHub](https://github.com/JoshHayes)
