@@ -1,6 +1,6 @@
 +++
 author = "Joshua Hayes"
-title = "Doob-Dynkin Lemma"
+title = "Doob–Dynkin Lemma"
 date = 2024-11-01
 [taxonomies]
 categories = ["Mathematics"]
@@ -18,7 +18,7 @@ is the smallest
 
 Suppose we have another measurable function \\(g \colon \Omega \to T\\)
 where \\((T, \mathcal{T})\\) is a measurable space. Under what conditions is
-\\(f\\) is \\(g\\)-measurable?
+\\(f\\) in fact \\(g\\)-measurable?
 
 <!-- more -->
 
@@ -27,7 +27,9 @@ sense that the \\(\sigma\\)-algebra \\(\mathcal{S}\\) on \\(S\\) the domain of \
 cannot be too "coarse". The other condition turns out to be that \\(f\\)
 must be a function of \\(g\\).
 
-## Universal property of induced \\(\sigma\\)-algebras
+## Can we formulate this as a universal property?
 
 Something like: Let \\(X\\) and \\(Y\\) be random variables. Then \\(Y\\) is
-\\(\sigma(X)\\)-measurable if and only if \\(Y\\) is a function of \\(X\\).
+\\(\sigma(X)\\)-measurable if and only if \\(Y\\) is a function of \\(X.\\)
+
+TODO: Finish Doob–Dynkin post
