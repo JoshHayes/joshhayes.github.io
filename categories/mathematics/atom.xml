@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Joshua Hayes - Mathematics</title>
+    <subtitle>Personal website of Joshua Hayes</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://joshuahayes.net/categories/mathematics/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://joshuahayes.net"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-11-01T00:00:00+00:00</updated>
+    <id>https://joshuahayes.net/categories/mathematics/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Doob–Dynkin Lemma</title>
+        <published>2024-11-01T00:00:00+00:00</published>
+        <updated>2024-11-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Joshua Hayes
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://joshuahayes.net/doob-dynkin/"/>
+        <id>https://joshuahayes.net/doob-dynkin/</id>
+        
+        <summary type="html">&lt;p&gt;Given measurable functions \(f\), \(g\) on a common space \(\Omega\), we
+say that \(f\) is \(g\)-measurable if the induced \(\sigma\)-algebras
+satisfy \(\sigma(f) \subset \sigma(g)\). If \(f \colon \Omega \to S\) is a
+function and \((S, \mathcal{S})\) is a measurable space, then
+$$\sigma(f) = \left\{ f^{-1}A \mid A \in \mathcal{S} \right\}$$
+is the smallest
+\(\sigma\)-algebra on \(\Omega\) such that \(f\) is
+\(\sigma(f)&#x2F;\mathcal{S}\)-measurable.&lt;&#x2F;p&gt;
+&lt;p&gt;Suppose we have another measurable function \(g \colon \Omega \to T\)
+where \((T, \mathcal{T})\) is a measurable space. Under what conditions is
+\(f\) in fact \(g\)-measurable?&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+</feed>
