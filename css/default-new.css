@@ -1,0 +1,426 @@
+@charset "UTF-8";
+
+/* TeX Gyre Pagella (Palatino) */
+@font-face {
+  font-family: "Pagella";
+  font-display: swap;
+  font-stretch: normal;
+
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/texgyrepagella-regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pagella";
+  font-display: swap;
+  font-stretch: normal;
+  font-style: italic;
+  font-weight: normal;
+  src: url("../fonts/texgyrepagella-italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pagella";
+  font-display: swap;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/texgyrepagella-bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Pagella";
+  font-display: swap;
+  font-stretch: normal;
+  font-style: italic;
+  font-weight: bold;
+  src: url("../fonts/texgyrepagella-bold-italic.woff2") format("woff2");
+}
+
+:root {
+  --font-serif:
+    "Pagella", Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua",
+    Georgia, serif;
+  --font-sans: sans-serif;
+  --font-mono: monospace;
+  --bg-main: #fbf7f0;
+  --fg-main: #000000;
+  --fg-dim: #595959;
+  --border: #9f9690;
+  --red: #a60000;
+  --magenta: #721045;
+}
+
+/* CSS Reset */
+/* no inherit https://www.oddbird.net/2025/09/04/box-model/ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  break-inside: avoid-column;
+}
+
+/* Responsive */
+html {
+  font-size: 2.1vw;
+}
+@media all and (min-width: 1000px) {
+  html {
+    font-size: 21px;
+  }
+}
+@media all and (max-width: 520px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+html {
+  height: 100%;
+  tab-size: 4;
+}
+
+body {
+  color: var(--fg-main);
+  background-color: var(--bg-main);
+
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1000px;
+  /* padding-left: 12.5%; */
+
+  font-family: var(--font-serif);
+  font-variant-numeric: oldstyle-nums;
+  /* font-size: 100%; */
+  font-size: 0.91rem;
+  line-height: 1.4;
+
+  /* corrects safari rendering */
+  position: relative;
+  z-index: -10000;
+  -webkit-font-smoothing: subpixel-antialiased;
+
+  /* other */
+  text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  /* -webkit-text-size-adjust: 100%; */
+  font-feature-settings: "kern";
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  /* color: var(--fg-link); */
+  font-style: normal;
+  font-size: 3.2rem;
+  font-weight: 400;
+  line-height: 1;
+  margin-top: 4rem;
+  margin-bottom: 1.4rem;
+}
+
+h2 {
+  font-style: italic;
+  font-size: 2.2rem;
+  font-weight: 400;
+  line-height: 1;
+  margin-top: 2.1rem;
+  margin-bottom: 1.4rem;
+}
+
+h3 {
+  font-style: italic;
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 1;
+  margin-top: 2rem;
+  margin-bottom: 1.4rem;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  display: block;
+  height: 1px;
+  margin: 1em 0;
+  padding: 0;
+  width: 55%;
+}
+
+article {
+  padding: 5rem 0rem;
+}
+
+section {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+p,
+dl,
+ol,
+ul {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+p {
+  margin-top: 1.4rem;
+  margin-bottom: 1.4rem;
+  padding-right: 0;
+  vertical-align: baseline;
+  /* text-align: left; */
+}
+
+sup {
+  line-height: 0;
+}
+
+/* epigraphs */
+div.epigraph {
+  margin: 5em 0;
+}
+
+div.epigraph > blockquote {
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+div.epigraph > blockquote,
+div.epigraph > blockquote > p {
+  font-style: italic;
+}
+
+div.epigraph > blockquote > footer {
+  font-style: normal;
+}
+
+div.epigraph > blockquote > footer > cite {
+  font-style: italic;
+}
+/* end epigraphs */
+
+blockquote {
+  font-size: 1.4rem;
+}
+
+blockquote p {
+  width: 55%;
+  margin-right: 40px;
+}
+
+blockquote footer {
+  width: 55%;
+  font-size: 1.1rem;
+  text-align: right;
+}
+
+section > p,
+section > footer,
+section > table {
+  width: 55%;
+}
+
+/* 50 + 5 == 55, to be the same width as paragraph */
+section > dl,
+section > ol,
+section > ul {
+  width: 50%;
+  -webkit-padding-start: 5%;
+}
+
+dt:not(:first-child),
+li:not(:first-child) {
+  margin-top: 0.25rem;
+}
+
+a:link,
+a:visited {
+  color: inherit;
+  /* color: var(--fg-link); */
+  text-underline-offset: 0.1em;
+  text-decoration-thickness: 0.05em;
+}
+
+/* hjfdlsghjkfdgsahjkfgdsahjk */
+
+footer {
+  background: var(--bg-main);
+  color: var(--fg-main);
+  text-align: center;
+  padding: 28px 20px;
+  font-size: 0.8em;
+  border-top: 1px solid var(--border);
+  margin-top: 20px;
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-family: var(--font-mono);
+  font-size: 1em;
+}
+
+.small-caps,
+sig,
+.subhead,
+.howto-name,
+a.xref {
+  font-style: normal;
+  font-variant-caps: small-caps;
+  letter-spacing: 0.05em;
+  /* font-size-adjust: cap-height 0.85; */
+  /* font-size-adjust: ex-height 0.56; */
+}
+
+abbr,
+.all-small-caps {
+  font-style: normal;
+  text-transform: lowercase;
+  font-variant-caps: small-caps;
+  letter-spacing: 0.05em;
+  /* font-variant-caps: all-small-caps; */
+  /* font-size-adjust: cap-height 0.85; */
+  font-size-adjust: ex-height 0.56;
+  /* letter-spacing: 0.1em; */
+}
+
+abbr {
+  text-underline-position: under;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: 1px underline dotted;
+}
+
+blockquote abbr,
+blockquote .caps,
+em abbr,
+em .caps,
+cite abbr,
+cite acronym,
+cite .caps {
+  font-style: normal;
+}
+
+cite,
+em {
+  font-style: italic;
+}
+
+img {
+  border: 0;
+}
+
+blockquote {
+  margin: 1.5em;
+}
+
+/* Tufte CSS */
+aside {
+  float: right;
+  clear: right;
+  margin-right: -60%;
+  width: 50%;
+  margin-top: 0.3rem;
+  margin-bottom: 0;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  vertical-align: baseline;
+  position: relative;
+}
+
+table {
+  margin: 0 auto;
+}
+
+th {
+  font-weight: normal;
+  text-align: right;
+  padding: 0 0.5em 0 0;
+}
+
+td:before {
+  content: "\2022";
+  padding-right: 0.5em;
+}
+
+td {
+  font-style: italic;
+  text-align: left;
+  padding: 0;
+}
+
+/* custom classes */
+
+.contact {
+  color: var(--fg-dim);
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
+}
+
+.paper {
+  margin-bottom: 1.4rem;
+}
+
+.paper br {
+  display: none;
+}
+
+.paper > a {
+  font-weight: 600;
+}
+
+.paper .title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+
+.paper .title a {
+  color: var(--fg-main);
+  text-decoration: none;
+}
+
+.paper .meta {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--fg-dim);
+  line-height: 1.4;
+  margin-top: 0.25rem;
+}
+
+.paper .meta + br + .meta {
+  margin-top: 0.12rem;
+}
+
+.paper .meta a {
+  color: var(--red);
+}
+
+.paper .meta .authors {
+  font-style: normal;
+}
+
+.paper .meta .journal {
+  font-style: italic;
+}
+
+.paper .meta .journal a {
+  font-style: italic;
+}
+
+.paper .abstract {
+  color: var(--fg-dim);
+  font-size: 0.85rem;
+  /* line-height: 1.6; */
+  margin-top: 0.4rem;
+}

@@ -1,0 +1,251 @@
+@charset "UTF-8";
+
+/* TeX Gyre Pagella (Palatino) */
+@font-face {
+  font-family: "Pagella";
+  font-display: swap;
+  font-stretch: normal;
+
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/texgyrepagella-regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pagella";
+  font-display: swap;
+  font-stretch: normal;
+  font-style: italic;
+  font-weight: normal;
+  src: url("../fonts/texgyrepagella-italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Pagella";
+  font-display: swap;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/texgyrepagella-bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Pagella";
+  font-display: swap;
+  font-stretch: normal;
+  font-style: italic;
+  font-weight: bold;
+  src: url("../fonts/texgyrepagella-bold-italic.woff2") format("woff2");
+}
+
+/* CSS Reset */
+/* no inherit https://www.oddbird.net/2025/09/04/box-model/ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  break-inside: avoid-column;
+}
+
+/* Responsive */
+/* html {
+  font-size: 2.1vw;
+}
+@media all and (min-width: 1000px) {
+  html {
+    font-size: 21px;
+  }
+}
+@media all and (max-width: 520px) {
+  html {
+    font-size: 18px;
+  }
+} */
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  html {
+    font-size: 17px;
+  }
+
+  body {
+    padding: 1.5rem 1rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+
+:root {
+  --font-serif:
+    "Pagella", Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua",
+    Georgia, serif;
+  --font-sans: sans-serif;
+  --font-mono: monospace;
+  --bg-main: #fbf7f0;
+  --fg-main: #000000;
+  --fg-dim: #595959;
+  --border: #9f9690;
+  --red: #a60000;
+  --red-warmer: #972500;
+  --red-cooler: #a0132f;
+  --magenta: #721045;
+  --max-width: 700px;
+}
+
+html {
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--fg-main);
+  font-family: var(--serif-fonts);
+  line-height: 1.4;
+  min-height: 100vh;
+  padding: 3rem 1.5rem;
+  max-width: var(--max-width);
+}
+
+a {
+  color: var(--red);
+  text-decoration: none;
+  /* text-transform: lowercase; */
+  /* font-variant-caps: small-caps; */
+}
+
+a:hover {
+  /* text-decoration: underline; */
+  background: #fbf3f3;
+  transition-property: background;
+  transition-duration: 0.2s;
+  border-radius: 8px;
+}
+
+p {
+  margin-bottom: 0.4rem;
+}
+
+h1 {
+  color: var(--red);
+  font-size: 2.5rem;
+  font-variant: small-caps;
+  font-weight: bold;
+  letter-spacing: 5%;
+  margin-bottom: 0.3rem;
+}
+
+h2 {
+  color: var(--fg-main);
+  font-size: 1.4rem;
+  font-variant: small-caps;
+  font-weight: 400;
+  margin: 1.8rem 0 0.8rem 0;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 1rem 0;
+}
+
+main {
+  margin: 0 auto;
+}
+
+header {
+  /* padding: 28px 0; */
+  border-bottom: 1px solid var(--border);
+  margin-top: 20px;
+}
+
+footer {
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 28px 20px;
+  border-top: 1px solid var(--border);
+  margin-top: 20px;
+}
+
+/* custom classes: contact, paper */
+
+.contact {
+  color: var(--fg-dim);
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
+}
+
+.paper {
+  margin-bottom: 1.4rem;
+}
+
+.paper br {
+  display: none;
+}
+
+.paper > a {
+  font-weight: 600;
+}
+
+.paper .title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+
+.paper .title a {
+  color: var(--fg-main);
+  text-decoration: none;
+}
+
+.paper .title a:hover {
+  color: var(--red);
+  text-decoration: underline;
+}
+
+.paper .meta {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--fg-dim);
+  line-height: 1.4;
+  margin-top: 0.25rem;
+}
+
+.paper .meta + br + .meta {
+  margin-top: 0.12rem;
+}
+
+.paper .meta a {
+  color: var(--red);
+}
+
+.paper .meta a:visited {
+  color: var(--magenta);
+}
+
+.paper .meta .authors {
+  font-style: normal;
+}
+
+.paper .meta .journal {
+  font-style: italic;
+}
+
+.paper .meta .journal a {
+  font-style: italic;
+}
+
+.paper .abstract {
+  color: var(--fg-dim);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin-top: 0.4rem;
+}
